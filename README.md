@@ -55,6 +55,7 @@ init();
 }
 ```
 ````
+(for other interesting use cases check out the original repository)
 
 ---
 

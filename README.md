@@ -1,38 +1,37 @@
 # MinObsidGet
 
-A minimal Obsidian plugin for embedding interactive HTML/CSS/JavaScript widgets inside notes.
+A minimal Obsidian plugin for embedding interactive HTML/CSS/JavaScript widgets directly inside notes using ```widget``` code blocks.
 
-This is a stripped-down version of the [original repo](https://github.com/infinition/obsidian-obsidget) without gallery and UI features. 
-
----
-
-## Structure
-
-Each widget block has **4 sections** separated by `---`:
-
-1. **HTML** – rendered inside the widget
-2. **CSS** – scoped to the widget (Shadow DOM)
-3. **JavaScript** – executed with access to `api`
-4. **JSON state** – persisted data (optional)
+This project is a stripped-down version of the original [Obsidget](https://github.com/infinition/obsidian-obsidget), with all non-essential features removed.
 
 ---
 
-## Installation
+## Features
 
-- Download the latest release from the [Releases page](https://github.com/ilyassov-d/obsidian-minobsidget/releases).
-- Extract `obsidian-minobsidget.zip` into your vault's `.obsidian/plugins/` folder.
-- Reload Obsidian and enable MinObsidGet.
+- Inline widgets using HTML, CSS, and JavaScript
+- Shadow DOM isolation
+- Persistent state via JSON
+- No UI overhead
 
 ---
 
-## Example: Click Counter
+## Usage
+
+Create a code block with language `widget`:
+
+---
+
+### Example: Click Counter
 
 ````markdown
 ```widget
+<!-- HTML block -->
 <button id="btn">0</button>
 ---
+/* CSS block */
 button { font-size: 20px; }
 ---
+// JS block
 const { root, getState, saveState } = api;
 
 async function init() {
@@ -51,7 +50,41 @@ async function init() {
 init();
 ---
 {
+  "_comment": "JSON state block",
   "count": 0
 }
 ```
 ````
+
+---
+
+## Structure
+
+Each widget block consists of **4 sections** separated by `---`:
+
+1. **HTML** – rendered inside the widget  
+2. **CSS** – scoped via Shadow DOM  
+3. **JavaScript** – executed with access to `api`  
+4. **JSON state** – persisted data (optional)  
+
+---
+
+## API
+
+Inside the JavaScript section:
+
+```js
+const { root, getState, saveState } = api;
+```
+
+- `root` → Shadow DOM root  
+- `getState()` → load saved state  
+- `saveState(data)` → persist state  
+
+---
+
+## Installation
+
+- Download from the [Releases page](https://github.com/ilyassov-d/obsidian-minobsidget/releases)
+- Extract into `.obsidian/plugins/`
+- Enable the plugin in Obsidian

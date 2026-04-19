@@ -19,7 +19,7 @@ Each widget block has **4 sections** separated by `---`:
 
 ## Installation
 
-- Download the latest release from the [Releases page]().
+- Download the latest release from the [Releases page](https://github.com/ilyassov-d/obsidian-minobsidget/releases).
 - Extract `obsidian-obsidget.zip` into your vault's `.obsidian/plugins/` folder.
 - Reload Obsidian and enable MinObsidGet.
 

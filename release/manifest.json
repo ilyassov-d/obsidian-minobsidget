@@ -1,0 +1,8 @@
+{
+  "id": "minobsidget",
+  "name": "MinObsidGet",
+  "version": "1.0.0",
+  "minAppVersion": "1.4.0",
+  "description": "Minimal HTML/CSS/JS widget runner for Obsidian.",
+  "isDesktopOnly": false
+}

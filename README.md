@@ -17,21 +17,6 @@ Each widget block has **4 sections** separated by `---`:
 
 ---
 
-## API
-
-Inside the JavaScript section:
-
-```js
-const { root, getState, saveState } = api;
-```
-
-- `root` – Shadow DOM root for querying elements
-- `getState()` – returns saved JSON state
-- `saveState(data)` – persists state to the note
-- `requestUrl` – wrapper for HTTP requests (from Obsidian)
-
----
-
 ## Example: Click Counter
 
 ````markdown

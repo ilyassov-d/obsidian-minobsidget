@@ -2,7 +2,7 @@
 
 A minimal Obsidian plugin for embedding interactive HTML/CSS/JavaScript widgets inside notes.
 
-This is a stripped-down version of [original repo](https://github.com/infinition/obsidian-obsidget) without gallery and UI features. 
+This is a stripped-down version of the [original repo](https://github.com/infinition/obsidian-obsidget) without gallery and UI features. 
 
 ---
 

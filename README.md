@@ -17,6 +17,14 @@ Each widget block has **4 sections** separated by `---`:
 
 ---
 
+## Installation
+
+- Download the latest release from the [Releases page]().
+- Extract `obsidian-obsidget.zip` into your vault's `.obsidian/plugins/` folder.
+- Reload Obsidian and enable MinObsidGet.
+
+---
+
 ## Example: Click Counter
 
 ````markdown
